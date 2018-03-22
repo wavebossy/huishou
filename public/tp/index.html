@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>邮来一九</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://at.alicdn.com/t/font_404372_bjgc0xyrqyiltyb9.css" rel="stylesheet" >
+    <style>
+        body {
+            min-width: 320px;
+            background: rgb(239,239,244);
+            color: #333;
+            font: 1.8rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        #content{  max-width: 640px;  }
+        #menu{position: fixed; max-width: 640px;  height: 5rem;  width: 100%;  bottom: 0;  background: white;  }
+        #menu_span1{     position: absolute;  left: 0;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;  padding-top: 0.5rem;    font-size: 1.4rem; }
+        #menu_span2{  position: absolute;  left: 50%;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;   padding-top: 0.5rem;    font-size: 1.4rem;}
+        #lunbo{  position: relative;  width: 100%;    }
+        .lunbo{width: 100%;}
+        #goodsList{  position: relative;  width: 100%;  height: auto;   }
+        /*ul{position: absolute;}*/
+        ul,li{  list-style: none;  margin: 0;  padding: 0;}
+        li {    float: left;  width: 50%;  text-align: center;  border: 4px solid white; background: white; height: 22rem;  padding: 0.3rem;}
+        .priceDiv{  position: relative;  top: -2rem;  width: 100%;  background: rgba(128, 128, 128, 0.4);  color: white;text-align: left  }
+        .priceText{  color: gray;  text-align: left;  position: relative;  top: -2rem;     height: 4rem;  overflow: hidden; }
+        ._red{color: #ff3600}
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <!--轮播图-->
+        <div id="lunbo">
+            <img class="lunbo" src="https://aecpm.alicdn.com/tps/i1/TB1r4h8JXXXXXXoXXXXvKyzTVXX-520-280.jpg" />
+        </div>
+        <div id="goodsList">
+            <ul>
+                <foreach name="datas" item="data">
+                    <li onclick="gdetail('{$data.id}')">
+                        <img style="width: 100%;" src="{$data.imgUrl}">
+                        <div class="priceDiv">{$data.price1}<s>{$data.price2}</s></div>
+                        <div class="priceText">{$data.gname}</div>
+                    </li>
+                </foreach>
+                <li style="height: 5rem;"></li>
+                <li style="height: 5rem;"></li>
+            </ul>
+
+        </div>
+        <div id="menu">
+            <div id="menu_span1" onclick="index()">
+                <div style=""><i class="iconfont icon-shopping _red" style="font-size: 2.5rem;"></i></div>
+                <div class="_red">首页</div>
+            </div>
+            <div id="menu_span2" onclick="ucenter()">
+                <div style=""><i class="iconfont icon-gerenzhongxin" style="font-size: 2.5rem;"></i></div>
+                <div style="">个人中心</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function index() {
+        window.location.href="__ROOT__/WeiXin/PostLaiyijiu/index";
+    }
+    function ucenter() {
+        window.location.href="__ROOT__/WeiXin/PostLaiyijiu/ucenter";
+    }
+    function gdetail(e) {
+        window.location.href="__ROOT__/WeiXin/PostLaiyijiu/gdetail?id="+e;
+    }
+</script>

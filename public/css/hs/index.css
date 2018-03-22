@@ -1,0 +1,68 @@
+body {
+    min-width: 320px;
+    background: rgb(239,239,244);
+    color: #333;
+    font: 1.4rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+#content{  max-width: 640px;  }
+
+#content ul{ list-style-type: none ; width: 100% ; margin: 0;  padding: 0; text-align: center}
+#content ul li{  list-style: none;  margin: 0;  padding: 0; float: left ; width: 33.33% ;
+    height: 4rem; line-height: 4rem;
+    border: 1px solid rgba(120, 120, 120, 0.4);}
+
+.rem3{  width: 3rem;  }
+.rem4{  width: 6rem;  }
+#showData tr td{font-size: 1.4rem;}
+.yuyue_but{width: 100%;height: 5rem;background: #05b114;text-align: center;line-height: 5rem;color: white;position: fixed;bottom: 0;max-width: 640px;}
+.yuyue_but2{width: 100%;height: 5rem;background: #ff7700;text-align: center;line-height: 5rem;color: white;position: fixed;bottom: 0;max-width: 640px;}
+.yuyue_but3{width: 100%;height: 5rem;background: #05b114;text-align: center;line-height: 5rem;color: white;position: fixed;bottom: 0;max-width: 640px;}
+.backred{
+    border-bottom: 2px solid #05b114;
+}
+
+.line_div{
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    max-width: 640px;
+}
+
+.line_pos{
+    top: 10rem;
+    margin: 2rem 0 ;
+    position: relative;
+}
+
+.iconfont{
+    font-size: 2rem;
+}
+.sel{  width: 33.33%;  float: left;  height: 4rem;  -webkit-appearance: none;  border: 0 solid rgba(0,0,0,0.2);  z-index: 99999;  position: relative;  }
+
+
+.address_line{
+    top: 2rem;
+    margin: 2rem 0 ;
+    position: relative;
+}
+
+.picker_div{
+    max-width: 640px;
+    width: 100%;background: white;height: 5rem;text-align: center;line-height: 5rem;border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+#address_div input{
+    height: 4rem;line-height: 4rem;
+}
+
+.xxdz{
+    clear: left;resize : none;position: relative;
+}

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>{$gdetail.gtitle}</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-width: 320px;
+            background: white;
+            color: #333;
+            font: 1.4rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <div style="position: relative;width: 100%"><img id="imgUrl" src="{$gdetail.imgUrl}"></div>
+    <div style="padding: 2rem 1rem 2rem 1rem;font-size: 1.8rem;">{$gdetail.gname}</div>
+    <div style="padding: 0 1rem 2rem 1rem;font-size: 1.8rem;">剩余库存：{$gdetail.Stock}</div>
+    <div style="padding: 0 1rem 0 0.5rem;font-size: 1.6rem;">
+        <span style="color:rgba(255, 100, 0,1);font-size: 1.8rem;">{$gdetail.price1}</span>
+        <s>{$gdetail.price2}</s>
+        <span style="font-size: 1.4rem;">物流+打包+人工费=<span style="font-size: 1.8rem;">{$gdetail.price3}元</span></span>
+    </div>
+    <div style="padding: 1rem 1rem 2rem 1rem;font-size: 1.6rem;height: 5rem;display: none">
+        <span>10邮币可抵扣1元邮费</span>
+        <span onclick="" style="color:rgba(255, 100, 0,1);position: absolute;right: 2rem;">我要赚邮币</span>
+    </div>
+    <div style="height: 5rem;"></div>
+    <div onclick="payment()" style="position: fixed;font-size: 1.8rem;color: white;text-align: center;background: rgb(255, 100, 0);width: 100%;height: 5rem;line-height: 5rem;bottom: 0;">支付费用领取</div>
+</div>
+</body>
+</html>
+<script>
+    $("#imgUrl").width($(window).width()).height($(window).width());
+    function payment() {
+        alert("微信支付正在开通中,敬请期待！");
+    }
+</script>

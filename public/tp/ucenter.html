@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>个人中心</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://at.alicdn.com/t/font_404372_bjgc0xyrqyiltyb9.css" rel="stylesheet" >
+    <style>
+        body {
+            min-width: 320px;
+            background: rgb(239,239,244);
+            color: #333;
+            font: 1.8rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        #content{  max-width: 640px;  }
+        #usImg{  width: 6rem;  height: 6rem;  border-radius: 5px;  }
+        #ucInfoDiv{  position: relative;  padding: 1rem;  width: 100%;  height: 8rem;  background: white;  top: 1rem;  }
+        #usName{  position: absolute;  left: 8rem;  }
+        #usPhone{      position: absolute;  left: 8rem;  top: 4rem; }
+        #youbi{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 2rem; }
+        #baobei{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 4rem; }
+        #dizhi_{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 4rem; }
+        #erweuma{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 6rem; }
+        .rightImg{ position: absolute; right: 1rem;top: 0.5rem;}
+        #menu{position: fixed;  max-width: 640px; height: 5rem;  width: 100%;  bottom: 0;  background: white;  }
+        #menu_span1{     position: absolute;  left: 0;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;  padding-top: 0.5rem;    font-size: 1.4rem; }
+        #menu_span2{  position: absolute;  left: 50%;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;   padding-top: 0.5rem;    font-size: 1.4rem;}
+        .iconfont{font-size: 2.5rem;}
+        .spanIcon{position: absolute;top: 0;}
+        .spanText{position: absolute;left: 4rem;top: 0;}
+        ._red{color: #ff3600}
+        ._yellow{color: #ffa800}
+        ._bule{color: #00a2ff}
+        ._green{color: #00b204}
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <div id="ucInfoDiv">
+            <img id="usImg" src="http://wx.qlogo.cn/mmopen/G36dsoBiapGUVeg6lw5sI73LrYnATYkrV9nibO0wC4CQ5X4qJuJDOdqKQ5aicG0Ueibujx6pUico79FjDZNBtNTWEknX469aBkj8g/0" />
+            <span id="usName">我是谁</span>
+            <span id="usPhone">手机 : 18000022666<a style="margin-left: 0.5rem;">修改</a></span>
+        </div>
+        <div id="youbi" >
+            <span class="spanIcon"><i class="iconfont icon-qianbiyoupiao _red"></i></span>
+            <span class="spanText">邮币</span>
+            <span class="rightImg"><i class="iconfont icon-gengduo"></i></span></div>
+        <div id="baobei">
+            <span class="spanIcon"><i class="iconfont icon-baobei _yellow"></i></span>
+            <span class="spanText">我的领取的宝贝</span>
+            <span class="rightImg"><i class="iconfont icon-gengduo"></i></span></div>
+        <div id="dizhi_">
+            <span class="spanIcon"><i class="iconfont icon-shouhuodizhi _bule"></i></span>
+            <span class="spanText">我的收货地址</span>
+            <span class="rightImg"><i class="iconfont icon-gengduo"></i></span></div>
+        <div id="erweuma">
+            <span class="spanIcon"><i class="iconfont icon-erweima _green"></i></span>
+            <span class="spanText">我的专属二维码</span>
+            <span class="rightImg"><i class="iconfont icon-gengduo"></i></span></div>
+        <div id="menu">
+            <div id="menu_span1" onclick="index()">
+                <div style=""><i class="iconfont icon-shopping" style="font-size: 2.5rem;"></i></div>
+                <div style="">首页</div>
+            </div>
+            <div id="menu_span2" onclick="ucenter()">
+                <div style=""><i class="iconfont icon-gerenzhongxin _red" style="font-size: 2.5rem;"></i></div>
+                <div class="_red">个人中心</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function index() {
+        window.location.href="__ROOT__/WeiXin/PostLaiyijiu/index";
+    }
+    function ucenter() {
+        window.location.href="__ROOT__/WeiXin/PostLaiyijiu/ucenter";
+    }
+</script>

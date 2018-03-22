@@ -1,0 +1,30 @@
+body {
+    min-width: 320px;
+    background: rgb(239,239,244);
+    color: #333;
+    font: 1.4rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#content{  max-width: 640px;  }
+#usImg{  width: 6rem;  height: 6rem;  border-radius: 5px;  }
+#ucInfoDiv{  position: relative;  padding: 1rem;  width: 100%;  height: 8rem;  background: white;  top: 1rem;  }
+#usName{  position: absolute;  left: 8rem;  }
+#usPhone{      position: absolute;  left: 8rem;  top: 4rem; }
+#youbi{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 2rem; }
+#baobei{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 4rem; }
+#dizhi_{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 4rem; }
+#erweuma{ position: relative;  padding: 1rem;  width: 100%;  height: 4.5rem; line-height: 4.5rem; background: white;  top: 6rem; }
+.rightImg{ position: absolute; right: 1rem;top: 0.5rem;}
+#menu{position: fixed;  max-width: 640px; height: 5rem;  width: 100%;  bottom: 0;  background: white;  }
+#menu_span1{     position: absolute;  left: 0;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;  padding-top: 0.5rem;    font-size: 1.4rem; }
+#menu_span2{  position: absolute;  left: 50%;  width: 50%;  text-align: center;  line-height: 2rem;  height: 5rem;   padding-top: 0.5rem;    font-size: 1.4rem;}
+.iconfont{font-size: 2.5rem;}
+.spanIcon{position: absolute;top: 0;}
+.spanText{position: absolute;left: 4rem;top: 0;}
+._red{color: #ff3600}
+._yellow{color: #ffa800}
+._bule{color: #00a2ff}
+._green{color: #00b204}
+.gray08{color: rgba(128, 128, 128, 0.8);}

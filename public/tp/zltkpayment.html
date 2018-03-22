@@ -1,0 +1,213 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>确认订单</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Application/WeiXin/Public/js/area/jquery.cityselect.js"></script>
+    <style>
+        body {
+            min-width: 320px;
+            background: #f8f8f8;
+            color: #333;
+            font: 1.4rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .sel{
+            width: 30%;
+            float: left;
+            height: 4rem;
+            left: 1.5rem;
+            -webkit-appearance: none;
+            border: 0 solid rgba(0,0,0,0.2);
+            z-index: 99999;
+            position: relative;
+        }
+        .inp{
+            -webkit-appearance: none;
+            border: 0 solid;
+            width: 82%;
+            padding: 0rem;
+            left: 18%;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#select_dizhi").citySelect({
+                prov: "湖北省",
+                city: "武汉市",
+                dist: "江汉区",
+                required:false,
+                nodata: "none"
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <div onclick="saveAddress()" style="position: absolute;width: 100%;height: 6rem;line-height: 6rem;background: white;">
+        <img src="__ROOT__/Application/WeiXin/Public/imgs/addr_to.png" style="width: 4rem;height: 4rem;position: absolute;left: 2rem;top: 1rem;">
+        <span style="position: absolute;left: 6rem" id="showAddress">请选择收件人详细地址</span>
+        <img src="__ROOT__/Application/WeiXin/Public/imgs/click_large.png" style="width: 2rem;height: 2rem;position: absolute;right: 1rem;top: 2rem;">
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 8rem;line-height: 8rem;background: white;top: 7rem;padding: 1rem;">
+        <img style="width: 6rem;" src="https://laigaonew.laigao520.com/zl20178161326072.png">
+        <span style="position: absolute;font-size: 2rem;top: -1.8rem;left: 8rem">战狼2同款项链</span>
+        <span style="position: absolute;font-size: 1.4rem;top: 2rem;left: 8rem;">男款12克,女款6克</span>
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 4rem;line-height: 4rem;background: white;top: 16rem;padding-left: 1rem;">
+        <span style="position: absolute;left: 1rem;">数量</span>
+        <span style="position: absolute;right: 2rem;color: rgb(255,36,0);">每人仅限领取一条</span>
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 4rem;line-height: 4rem;background: white;top: 21rem;padding-left: 1rem;">
+        <span style="position: absolute;left: 1rem;">价格</span>
+        <span style="position: absolute;right: 2rem;color: rgb(255,36,0);">0.00</span>
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 4rem;line-height: 4rem;background: white;top: 26rem;padding-left: 1rem;">
+        <span style="position: absolute;left: 1rem;">物流+打包+人工费</span>
+        <span style="position: absolute;right: 2rem;color: rgb(255,36,0);">19.00</span>
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 4rem;line-height: 4rem;background: white;top: 31rem;padding-left: 1rem;">
+        男款12克，女款6克
+    </div>
+
+    <div style="position: absolute;width: 100%;height: 4rem;line-height: 4rem;top: 35rem;padding-left: 1rem;">
+        温馨提示：收货时无需再给快递员支付费用
+    </div>
+
+    <div onclick="callpay()" style="position: absolute;font-size: 1.8rem;color: white;text-align: center;background: rgb(255, 100, 0);width: 100%;height: 5rem;line-height: 5rem;bottom: 0;">支付费用</div>
+</div>
+<div id="address_div" style="display: none">
+    <div style="position: absolute;background: white;height: 5rem;line-height: 5rem;width: 100%;padding-left: 1rem;border-top: 1px solid rgba(128, 128, 128, 0.3);">姓名<input placeholder="姓名(根据相关法律法规请使用真实姓名)" id="username" name="username" class="inp" /></div>
+    <div style="position: absolute;background: white;height: 5rem;line-height: 5rem;width: 100%;padding-left: 1rem;top: 5rem;border-top: 1px solid rgba(128, 128, 128, 0.3);">电话<input type="number" placeholder="请输入电话号码" id="phone" name="phone" class="inp" /></div>
+    <div style="width: 100%;position: absolute;background: white;height: 5rem;line-height: 5rem;padding-left: 1rem;top: 10rem;border-top: 1px solid rgba(128, 128, 128, 0.3);">
+        <div id="select_dizhi" style="overflow: hidden;">
+            <div style="width: 10%;float: left;">地区</div>
+            <select id="province" class="prov sel"></select>
+            <select id="city" class="city sel" ></select>
+            <select id="area" class="dist sel"></select>
+        </div>
+    </div>
+    <div style="clear: left;position: absolute;background: white;height: 5rem;line-height: 5rem;width: 100%;padding-left: 1rem;top: 15rem;border-top: 1px solid rgba(128, 128, 128, 0.3);">街道<input placeholder="请输入详细地址信息" id="address" name="address" class="inp" /></div>
+    <div onclick="saveCore()" style="position: absolute;font-size: 1.8rem;color: white;text-align: center;background: rgb(255, 100, 0);width: 100%;height: 5rem;line-height: 5rem;bottom: 0;">保存</div>
+</div>
+<script>
+    var coreid = -1;
+    var gid = 1; // 1 Nan 2 nv
+    function saveAddress(){
+        $("#content").hide();
+        $("#address_div").show();
+    }
+    function saveCore() {
+        var username = $("#username").val();
+        var province = $("#province").val();
+        var city = $("#city").val();
+        var area = $("#area").val();
+        var phone = $("#phone").val();
+        var address = $("#address").val();
+//        console.log([username,province,city,phone,address]);return;
+        if(username=="" || username.length<=0){
+            alert("请输入名字");return;
+        }
+        if(province=="" || province.length<=0){
+            alert("请选择省");return;
+        }
+        if(city=="" || city.length<=0){
+            alert("请选择市");return;
+        }
+        if(phone=="" || phone.length<=0){
+            alert("请输入电话号码");return;
+        }
+        if(address=="" || address.length<=0){
+            alert("请输入详细收货地址");return;
+        }
+        $.ajax({
+            url:"/WeiXin/Index/zltksaveCore",
+            type: "post",
+            data:{
+                username:username,
+                province:province,
+                city:city,
+                area:area,
+                phone:phone,
+                address:address
+            },
+            cache:false,
+            dataType: "json",
+            beforeSend:function(XMLHttpRequest){},
+            success:function(res){
+                if(res.code!=-1){
+                    coreid = res.coreid;
+                    $("#showAddress").html(res.address);
+                    $("#address_div").hide();
+                    $("#content").show();
+                }else{
+                    alert("保存地址失败!");
+                }
+            },
+            error: function (XMLHttpRequest) {
+                alert("网络错误,请稍后再试!");
+            }
+        });
+
+    }
+    function callpay() {
+        if (typeof (WeixinJSBridge) == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+    //调用微信JS api 支付
+    function jsApiCall() {
+        if(coreid==-1){
+            alert("请选择地址");return;
+        }
+        $.ajax({
+            url:"/WeiXin/Index/matching",
+            type: "get",
+            data:{
+                proType:2,// 随意填
+                gid:gid,
+                coreid:coreid,
+            },
+            cache:false,
+            dataType: "json",
+            beforeSend:function(XMLHttpRequest){},
+            success:function(json){
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest',json,
+                    function(res){
+                        var rs = res.err_msg.indexOf("ok");
+                        if(rs == -1){
+                            alert("支付失败!");
+                        }else { //支付成功
+                            alert("支付成功!");
+                        }
+                    }
+                );
+            },
+            error: function (XMLHttpRequest) {
+                alert("网络错误,请稍后再试!");
+            }
+        });
+    }
+</script>
+</body></html>

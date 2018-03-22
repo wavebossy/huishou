@@ -1,0 +1,17 @@
+body {
+    min-width: 320px;
+    /*background: rgb(239,239,244);*/
+    color: #333;
+    font: 1.4rem/1.5 "STHeitiSC-Light","Microsoft YaHei",Helvitica,Verdana,Tohoma,Arial,san-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#content{  max-width: 640px;  }
+ul,li{  list-style: none;  margin: 0;  padding: 0;}
+li {   width: 100%;  background: white; height: 10rem;  padding: 1rem; border-bottom: 1px solid rgba(128, 128, 128, 0.3)   }
+._red{color: #ff3600}
+._yellow{color: #ffa800}
+._bule{color: #00a2ff}
+._green{color: #00b204}
+.yuyue_but{width: 100%;height: 5rem;background: #05b114;text-align: center;line-height: 5rem;color: white;position: fixed;bottom: 0;max-width: 640px;}
