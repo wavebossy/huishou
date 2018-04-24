@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             <label for="files">可选上传图片</label><br/>
-            <img style="width: 6rem;" src="https://protal.szsldy.com/butoumingupload.png"  onclick="$('#files').click()" />
+            <img style="width: 6rem;" src="http://ovr6bpugl.bkt.clouddn.com/butoumingupload.png"  onclick="$('#files').click()" />
             <input type="file" id="files" name="imgfile" style="display: none">
         </div>
     </form>

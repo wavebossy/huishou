@@ -72,8 +72,8 @@ class UserController extends Controller{
                     if ($err !== null) {
                         $image="";
                     } else {
-                        $image="https://protal.szsldy.com/".$fileName;
-//                        $image="http://ovr6bpugl.bkt.clouddn.com/".$fileName;
+//                        $image="https://protal.szsldy.com/".$fileName;
+                        $image="http://ovr6bpugl.bkt.clouddn.com/".$fileName;
                         $par["v"] = $image;
                         unset($par["mm_logo"]);
                     }

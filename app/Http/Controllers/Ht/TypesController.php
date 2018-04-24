@@ -89,7 +89,8 @@ class TypesController extends Controller{
                 if ($err !== null) {
                     $image="";
                 } else {
-                    $image="https://protal.szsldy.com/".$fileName;
+                    //$image="https://protal.szsldy.com/".$fileName;
+                    $image="http://ovr6bpugl.bkt.clouddn.com/".$fileName;
                     $params = array_merge($params,array("imgs"=>$image));
                 }
             }
@@ -131,7 +132,8 @@ class TypesController extends Controller{
                 if ($err !== null) {
                     $image="";
                 } else {
-                    $image="https://protal.szsldy.com/".$fileName;
+                    //$image="https://protal.szsldy.com/".$fileName;
+                    $image="http://ovr6bpugl.bkt.clouddn.com/".$fileName;
                     $params = array_merge($params,array("imgs"=>$image));
                 }
             }
